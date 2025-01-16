@@ -35,8 +35,9 @@ Coffee shop ui mas bro
   <img src="https://github.com/user-attachments/assets/6bf3ea23-5f51-4bad-865b-803b05ea5b84" alt="Image 2" width="300"/>
   <img src="https://github.com/user-attachments/assets/5882108a-c242-4a0c-a389-0dd58e76eeaf" alt="Image 3" width="300"/>
   <br>
-  <img src="https://github.com/user-attachments/assets/247d5c57-b456-496e-a650-cde0890867a9" alt="Image 4" width="300"/>
-  <img src="https://github.com/user-attachments/assets/a2ba8282-c72a-4e63-8ea2-891b59fce488" alt="Image 5" width="300"/>
+  <img src="https://github.com/user-attachments/assets/01c8be87-c00c-494c-a081-3fcb9b28e0cf" alt="Image 4" width="300"/>
+  <img src="https://github.com/user-attachments/assets/d0141e71-c139-49d4-9c91-d1dbf5dee646" alt="Image 5" width="300"/>
+
   <br>
   <img src="https://github.com/user-attachments/assets/be49736a-cb90-4162-8092-00e6974f93ff" alt="Image 6" width="300"/>
 </div>
