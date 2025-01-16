@@ -24,7 +24,7 @@ class FixedBottomOrderWidget extends StatelessWidget {
         left: 24,
         right: 24,
         top: 16,
-        bottom: 64,
+        bottom: 46,
       ),
       decoration: BoxDecoration(
         color: Colors.white,
