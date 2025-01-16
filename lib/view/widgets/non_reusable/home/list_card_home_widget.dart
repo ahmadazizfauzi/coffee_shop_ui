@@ -51,6 +51,7 @@ class CoffeeCardWidget extends StatelessWidget {
         ),
       ),
       child: Container(
+        height: 300,
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),

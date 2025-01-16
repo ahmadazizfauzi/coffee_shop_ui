@@ -24,21 +24,23 @@ class DetailCoffeeScreen extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              child: Padding(
-                padding:
-                    const EdgeInsets.only(left: 24, right: 24, top: 64),
-                child: Column(
-                  children: [
-                    const AppBarDetailWidget(),
-                    const SizedBox(height: 24),
-                    BannerDetailWidget(coffee: coffee),
-                    const SizedBox(height: 16),
-                    TitleRatingDetailWidget(coffee: coffee),
-                    const SizedBox(height: 16),
-                    DescriptionDetailWidget(coffee: coffee),
-                    const SizedBox(height: 24),
-                    const SizeDetailWidget(),
-                  ],
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 24, right: 24, top: 64),
+                  child: Column(
+                    children: [
+                      const AppBarDetailWidget(),
+                      const SizedBox(height: 24),
+                      BannerDetailWidget(coffee: coffee),
+                      const SizedBox(height: 16),
+                      TitleRatingDetailWidget(coffee: coffee),
+                      const SizedBox(height: 16),
+                      DescriptionDetailWidget(coffee: coffee),
+                      const SizedBox(height: 24),
+                      const SizeDetailWidget(),
+                      const SizedBox(height: 24),
+                    ],
+                  ),
                 ),
               ),
             ),
