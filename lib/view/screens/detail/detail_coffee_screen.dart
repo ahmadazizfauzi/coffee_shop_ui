@@ -1,3 +1,4 @@
+import 'package:coffee/model/constant/app_color.dart';
 import 'package:coffee/model/data/data_coffee.dart';
 import 'package:coffee/view/widgets/non_reusable/detail/description_detail_widget.dart';
 import 'package:coffee/view/widgets/non_reusable/detail/size_detail_widget.dart';
@@ -18,6 +19,7 @@ class DetailCoffeeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.color_f9f9f9,
       body: SafeArea(
         child: Column(
           children: [
