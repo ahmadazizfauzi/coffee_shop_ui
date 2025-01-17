@@ -39,7 +39,7 @@ class DataCoffee {
       rating: 4.8,
       type: CoffeeType.latte,
       fullDescription:
-          'Caffè Mocha is a chocolate-flavored variant of a caffè latte. '
+          'A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the foam is about 1 cm thick. '
           'It is made up of espresso, steamed milk, and chocolate syrup or powder. '
           'This delightful beverage offers a perfect balance of coffee and chocolate, '
           'topped with whipped cream for an indulgent experience.',

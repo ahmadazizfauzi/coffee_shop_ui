@@ -65,7 +65,7 @@ class WelcomeScreen extends StatelessWidget {
                   BigButton(
                     text: 'Get Started',
                     onPressed: () {
-                      Get.offNamed('/bottombar');
+                      Get.offAllNamed('/bottombar', predicate: (_) => false);
                     },
                   ),
                 ],

@@ -22,21 +22,42 @@ class Navigation extends StatelessWidget {
         primaryTextTheme: GoogleFonts.soraTextTheme(),
       ),
       initialRoute: '/welcome',
+      defaultTransition: Transition.leftToRight,
+      popGesture: true,
       getPages: [
-        GetPage(name: '/bottombar', page: () => const BottomBarRoute()),
-        GetPage(name: '/welcome', page: () => const WelcomeScreen()),
-        GetPage(name: '/delivery', page: () => const DeliveryScreen()),
         GetPage(
-          name: '/order',
-          page: () => OrderScreen(
-            coffee: Get.arguments as Coffee,
-          ),
+          name: '/bottombar',
+          page: () => const BottomBarRoute(),
+          transition: Transition.leftToRight,
+          transitionDuration: const Duration(milliseconds: 300),
+        ),
+        GetPage(
+          name: '/welcome',
+          page: () => const WelcomeScreen(),
+          transition: Transition.fade,
+          transitionDuration: const Duration(milliseconds: 300),
         ),
         GetPage(
           name: '/detail_coffee',
           page: () => DetailCoffeeScreen(
             coffee: Get.arguments as Coffee,
           ),
+          transition: Transition.fade,
+          transitionDuration: const Duration(milliseconds: 300),
+        ),
+        GetPage(
+          name: '/order',
+          page: () => OrderScreen(
+            coffee: Get.arguments as Coffee,
+          ),
+          transition: Transition.fade,
+          transitionDuration: const Duration(milliseconds: 300),
+        ),
+        GetPage(
+          name: '/delivery',
+          page: () => const DeliveryScreen(),
+          transition: Transition.downToUp,
+          transitionDuration: const Duration(milliseconds: 500),
         ),
       ],
     );
