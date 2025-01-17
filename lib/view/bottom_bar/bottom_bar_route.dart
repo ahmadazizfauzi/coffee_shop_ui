@@ -16,6 +16,19 @@ class BottomBarRoute extends StatefulWidget {
 
 class _BottomBarRouteState extends State<BottomBarRoute> {
   int _selectedIndex = 0;
+  late PageController _pageController;
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController();
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
 
   final List<Widget> _screens = [
     const HomeScreen(),
@@ -25,15 +38,25 @@ class _BottomBarRouteState extends State<BottomBarRoute> {
   ];
 
   void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+    _pageController.animateToPage(
+      index,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _screens[_selectedIndex],
+      body: PageView(
+        controller: _pageController,
+        onPageChanged: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
+        children: _screens,
+      ),
       bottomNavigationBar: Container(
         height: 99,
         padding: const EdgeInsets.symmetric(horizontal: 20),

@@ -24,7 +24,7 @@ class FixedBottomOrderWidget extends StatelessWidget {
         left: 24,
         right: 24,
         top: 16,
-        bottom: 64,
+        bottom: 46,
       ),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -88,7 +88,7 @@ class FixedBottomOrderWidget extends StatelessWidget {
       height: 50,
       child: ElevatedButton(
         onPressed: () {
-          Get.offNamed("/delivery");
+          Get.toNamed("/delivery");
         },
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColor.primaryBrown,

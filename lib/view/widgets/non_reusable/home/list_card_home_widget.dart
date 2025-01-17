@@ -2,6 +2,7 @@ import 'package:coffee/view/screens/detail/detail_coffee_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:coffee/model/constant/app_color.dart';
 import 'package:coffee/model/data/data_coffee.dart';
+import 'package:get/get.dart';
 
 class ListCardHomeWidget extends StatelessWidget {
   final List<Coffee> coffeeList;
@@ -44,36 +45,37 @@ class CoffeeCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => DetailCoffeeScreen(coffee: coffee),
-        ),
+      onTap: () => Get.toNamed(
+        '/detail_coffee',
+        arguments: coffee,
       ),
-      child: Container(
-        height: 300,
-        padding: const EdgeInsets.all(8),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          color: Colors.white,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _buildCoffeeImage(),
-            Padding(
-              padding: const EdgeInsets.only(top: 8),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  _buildCoffeeDetails(),
-                  const SizedBox(height: 8),
-                  _buildPriceRow(),
-                ],
+      child: Hero(
+        tag: coffee.image,
+        child: Container(
+          height: 300,
+          padding: const EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            color: Colors.white,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _buildCoffeeImage(),
+              Padding(
+                padding: const EdgeInsets.only(top: 8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    _buildCoffeeDetails(),
+                    const SizedBox(height: 8),
+                    _buildPriceRow(),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

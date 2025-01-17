@@ -2,6 +2,7 @@ import 'package:coffee/model/constant/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:get/get.dart';
 
 class MapDeliveryWidget extends StatefulWidget {
   const MapDeliveryWidget({super.key});
@@ -94,7 +95,7 @@ class _MapDeliveryWidgetState extends State<MapDeliveryWidget> {
             child: IconButton(
               icon: const Icon(Icons.arrow_back),
               onPressed: () {
-                Navigator.pop(context);
+                Get.back();
               },
             ),
           ),
